@@ -56,7 +56,7 @@ ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 DEMO_PAGE_INTRO_HTML = """
-Here are some oTree games.
+oTreeの実験用プロジェクトを一覧表示しています。
 """
 
 
