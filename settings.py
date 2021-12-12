@@ -9,8 +9,17 @@ SESSION_CONFIGS = [
         num_demo_participants=3,
     ),
     dict(
-        name='survey', app_sequence=['survey', 'payment_info'], num_demo_participants=1
+        name='survey',
+        display_name="サンプル調査",
+        app_sequence=['survey', 'payment_info'], 
+        num_demo_participants=3,
     ),
+    dict(
+        name='prisoner',
+        display_name="囚人のジレンマ",
+        app_sequence=['prisoner', 'payment_info'], 
+        num_demo_participants=2,
+    )
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
