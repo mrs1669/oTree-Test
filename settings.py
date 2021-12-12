@@ -12,7 +12,13 @@ SESSION_CONFIGS = [
         name='survey',
         display_name="サンプル調査",
         app_sequence=['survey', 'payment_info'], 
-        num_demo_participants=3
+        num_demo_participants=3,
+    ),
+    dict(
+        name='prisoner',
+        display_name="囚人のジレンマ",
+        app_sequence=['prisoner', 'payment_info'], 
+        num_demo_participants=2,
     )
 ]
 
