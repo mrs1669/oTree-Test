@@ -3,12 +3,6 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-        name='guess_two_thirds',
-        display_name="Guess 2/3 of the Average",
-        app_sequence=['guess_two_thirds', 'payment_info'],
-        num_demo_participants=3,
-    ),
-    dict(
         name='survey',
         display_name="サンプル調査",
         app_sequence=['survey', 'payment_info'], 
@@ -18,7 +12,7 @@ SESSION_CONFIGS = [
         name='prisoner',
         display_name="囚人のジレンマ",
         app_sequence=['prisoner', 'payment_info'], 
-        num_demo_participants=2,
+        num_demo_participants=2
     )
 ]
 
@@ -36,10 +30,10 @@ SESSION_FIELDS = []
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ja'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'USD'
+REAL_WORLD_CURRENCY_CODE = 'JPY'
 USE_POINTS = True
 
 ROOMS = [
@@ -56,7 +50,7 @@ ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 DEMO_PAGE_INTRO_HTML = """
-Here are some oTree games.
+oTreeの実験用プロジェクトを一覧表示しています。
 """
 
 
