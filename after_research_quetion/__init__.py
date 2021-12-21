@@ -16,9 +16,12 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    name = models.StringField(label='あなたの氏名をフルネームでお書きください。')
-    studentNumber = models.StringField(label='あなたの学籍番号をお書きください。')
-    email = models.StringField(label='あなたの電子メールアドレスをお書きください。なお、大学から与えられている公式アカウントのものをご記入ください。それ以外のものを記入した場合、謝金は支払われません。')
+    q1_1 = models.StringField(
+        choices=[['yes', 'はい、わかりやすかったです'], ['no', 'いいえ、わかりにくいところがありました']],
+        label='先ほどの実験説明は理解しやすいものでしたか？',
+        widget=widgets.RadioSelect,
+    )
+    q1_2 = models.StringField(label='今後の参考のためによろしければ、改善点等書いていただけるとありがたいです。(特になければ「特になし」とご記入ください)')
 
 
 # FUNCTIONS
@@ -26,6 +29,6 @@ class Player(BasePlayer):
 
 class AfterResearchQuestion(Page):
     form_model = 'player'
-    form_fields = ['name','studentNumber','email']
+    form_fields = ['q1_1','q1_2']
 
 page_sequence = [AfterResearchQuestion]
