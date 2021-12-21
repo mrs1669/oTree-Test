@@ -55,33 +55,7 @@ class Player(BasePlayer):
 
 # FUNCTIONS
 # PAGES
-class Demographics(Page):
-    form_model = 'player'
-    form_fields = ['age', 'gender','name','studentNumber']
-
-class BasicInformation(Page):
-    form_model = 'player'
-    form_fields = ['name','studentNumber','email']
-
 class ResearchExplanation(Page):
     form_model = 'player'
-
-class CognitiveReflectionTest(Page):
-    form_model = 'player'
-    form_fields = ['crt_bat', 'crt_widget', 'crt_lake']
-
-class FF(Page):
-    form_model = 'player'
-    form_fields = ['q2_1','q2_2']
-
-class Introduction(Page):
-    form_model = 'player'
-    form_fields = ['isConsent']
-
-    @staticmethod
-    def error_message(player, values):
-        print('values is', values)
-        if values['isConsent'] == 'disagree':
-            return '同意していただけない場合は実験に進むことはできません。ブラウザを閉じて実験を終了してください。'
 
 page_sequence = [ResearchExplanation]
