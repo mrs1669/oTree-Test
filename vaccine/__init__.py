@@ -83,4 +83,4 @@ class Introduction(Page):
         if values['isConsent'] == 'disagree':
             return '同意していただけない場合は実験に進むことはできません。ブラウザを閉じて実験を終了してください。'
 
-page_sequence = [Introduction, BasicInformation, ResearchExplanation, CognitiveReflectionTest]
+page_sequence = [Introduction, BasicInformation, ResearchExplanation, FF]
