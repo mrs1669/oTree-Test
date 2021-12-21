@@ -17,7 +17,7 @@ SESSION_CONFIGS = [
     dict(
         name='vaccine',
         display_name="ワクチン接種",
-        app_sequence=['research_intro', 'vaccine_explanation', 'vaccine', 'payment_info'], 
+        app_sequence=['research_intro', 'vaccine_explanation', 'vaccine', 'after_research_question', 'payment_info'], 
         num_demo_participants=3
     )
 ]
