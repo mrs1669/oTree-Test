@@ -16,6 +16,11 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    isConsent = models.StringField(
+        choices=[['agree', '同意する'], ['disagree', '同意しない']],
+        label='',
+        widget=widgets.RadioSelect,
+    )
     age = models.IntegerField(label='年齢は何歳ですか？[デバッグ用]', min=13, max=125)
     gender = models.StringField(
         choices=[['男性', '男性'], ['女性', '女性']],
@@ -62,6 +67,6 @@ class FF(Page):
 
 class Introduction(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender','name','studentNumber']
+    form_fields = ['isConsent']
 
 page_sequence = [Introduction, FF, CognitiveReflectionTest]
