@@ -27,10 +27,6 @@ class Player(BasePlayer):
 
 # FUNCTIONS
 # PAGES
-class BasicInformation(Page):
-    form_model = 'player'
-    form_fields = ['name','studentNumber','email']
-
 class Introduction(Page):
     form_model = 'player'
     form_fields = ['isConsent']
@@ -40,5 +36,9 @@ class Introduction(Page):
         print('values is', values)
         if values['isConsent'] == 'disagree':
             return '同意していただけない場合は実験に進むことはできません。ブラウザを閉じて実験を終了してください。'
+
+class BasicInformation(Page):
+    form_model = 'player'
+    form_fields = ['name','studentNumber','email']
 
 page_sequence = [Introduction, BasicInformation]
