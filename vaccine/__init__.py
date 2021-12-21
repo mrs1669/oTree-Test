@@ -16,18 +16,13 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    q2_1 = models.StringField(
-        choices=[['yes', 'はい、わかりやすかったです'], ['no', 'いいえ、わかりにくいところがありました']],
-        label='先ほどの実験説明は理解しやすいものでしたか？',
-        widget=widgets.RadioSelect,
-    )
-    q2_2 = models.StringField(label='今後の参考のためによろしければ、改善点等書いていただけるとありがたいです。(特になければ「特になし」とご記入ください)')
+    main = models.StringField(label='実験のメイン')
 
 
 # FUNCTIONS
 # PAGES
-class FF(Page):
+class MainResearch(Page):
     form_model = 'player'
-    form_fields = ['q2_1','q2_2']
+    form_fields = ['main']
 
-page_sequence = [FF]
+page_sequence = [MainResearch]
