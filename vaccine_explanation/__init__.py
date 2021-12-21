@@ -16,15 +16,12 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    isConsent = models.StringField(
-        choices=[['agree', '同意する'], ['disagree', '同意しない']],
-        label='',
-        widget=widgets.RadioSelect,
-    )
+    temp = models.StringField(label='temp')
 
 # FUNCTIONS
 # PAGES
 class ResearchExplanation(Page):
     form_model = 'player'
+    form_fields = ['temp']
 
 page_sequence = [ResearchExplanation]
