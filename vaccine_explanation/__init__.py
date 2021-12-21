@@ -16,7 +16,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    temp = models.StringField(label='temp')
+    temp = models.StringField(label='temp', blank=True)
 
 # FUNCTIONS
 # PAGES
