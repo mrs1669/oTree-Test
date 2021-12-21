@@ -25,6 +25,7 @@ class Player(BasePlayer):
     studentNumber = models.StringField(label='あなたの学籍番号をお書きください。')
     email = models.StringField(label='あなたの電子メールアドレスをお書きください。なお、大学から与えられている公式アカウントのものをご記入ください。それ以外のものを記入した場合、謝金は支払われません。')
 
+
 # FUNCTIONS
 # PAGES
 class Introduction(Page):
