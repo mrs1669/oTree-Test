@@ -13,6 +13,12 @@ SESSION_CONFIGS = [
         display_name="囚人のジレンマ",
         app_sequence=['prisoner', 'payment_info'], 
         num_demo_participants=2
+    ),
+    dict(
+        name='vaccine',
+        display_name="ワクチン接種",
+        app_sequence=['vaccine', 'payment_info'], 
+        num_demo_participants=3
     )
 ]
 
