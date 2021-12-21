@@ -60,5 +60,8 @@ class FF(Page):
     form_model = 'player'
     form_fields = ['q2_1']
 
+class Introduction(Page):
+    form_model = 'player'
+    form_fields = ['age', 'gender','name','studentNumber']
 
-page_sequence = [Demographics, FF, CognitiveReflectionTest]
+page_sequence = [Introduction, FF, CognitiveReflectionTest]
