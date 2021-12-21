@@ -62,6 +62,9 @@ class BasicInformation(Page):
     form_model = 'player'
     form_fields = ['name','studentNumber','email']
 
+class ResearchExplanation(Page):
+    form_model = 'player'
+
 class CognitiveReflectionTest(Page):
     form_model = 'player'
     form_fields = ['crt_bat', 'crt_widget', 'crt_lake']
@@ -80,4 +83,4 @@ class Introduction(Page):
         if values['isConsent'] == 'disagree':
             return '同意していただけない場合は実験に進むことはできません。ブラウザを閉じて実験を終了してください。'
 
-page_sequence = [Introduction, BasicInformation, FF, CognitiveReflectionTest]
+page_sequence = [Introduction, BasicInformation, ResearchExplanation, CognitiveReflectionTest]
