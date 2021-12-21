@@ -69,4 +69,10 @@ class Introduction(Page):
     form_model = 'player'
     form_fields = ['isConsent']
 
+    @staticmethod
+    def error_message(player, values):
+        print('values is', values)
+        if values['isConsent'] == 'disagree':
+            return '同意していただけない場合は実験に進むことはできません。ブラウザを閉じて実験を終了してください。'
+
 page_sequence = [Introduction, FF, CognitiveReflectionTest]
