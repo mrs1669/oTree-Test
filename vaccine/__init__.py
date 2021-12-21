@@ -33,9 +33,10 @@ class Player(BasePlayer):
     studentNumberTest = models.IntegerField(label='あなたの学籍番号をお書きください。(b,gを除き半角数字で入力してください)', min=1000000, max=2200000)
     q2_1 = models.StringField(
         choices=[['yes', 'はい、わかりやすかったです'], ['no', 'いいえ、わかりにくいところがありました']],
-        label='先ほどの実験の説明は理解しやすいものでしたか？',
+        label='先ほどの実験説明は理解しやすいものでしたか？',
         widget=widgets.RadioSelect,
     )
+    q2_2 = models.StringField(label='今後の参考のためによろしければ、改善点等書いていただけるとありがたいです。(特になければ「特になし」とご記入ください)')
     crt_bat = models.IntegerField(
         label='''
         あんけ１'''
@@ -71,7 +72,7 @@ class CognitiveReflectionTest(Page):
 
 class FF(Page):
     form_model = 'player'
-    form_fields = ['q2_1']
+    form_fields = ['q2_1','q2_2']
 
 class Introduction(Page):
     form_model = 'player'
