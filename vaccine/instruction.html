@@ -15,7 +15,14 @@
         2. 受取所に行くためにかける努力コストを，若者役の人は0~500，高齢者役の人は0~300の整数で選択していただきます．
 
     </p>
-    <p><i>※先着順方式の場合，かけた努力コストが1でも大きい方が選択されます．</i></p>
+    <p><i>※先着順方式の場合，かけた努力コストが1でも大きい方が選択されます．<br>
+        かけた努力コストが同値の場合，ランダムに選択されます．<br>
+        また，受取所Yは移動コストが200かかります．
+    </i></p>
+
+    <p>
+        以下の表は，仮に努力コストで相手を上回り，受取所で1000の利得を得られた際に，移動コストや努力コストを差し引いた後の利得についてまとめたものです．選択の参考にしてください．<br>
+    </p>
 
     <table class='table table-bordered text-center'
            style='width: auto; margin: auto'>
@@ -28,15 +35,30 @@
             <th>Y</th>
         </tr>
         <tr>
-            <th rowspan=2><span style="transform: rotate(-90deg);">あなたがかける努力コスト</span></th>
-            <th>Cooperate</th>
-            <td>100, 100</td>
-            <td>0, 50</td>
+            <th rowspan=5><span style="transform: rotate(-90deg);">あなたがかける努力コスト</span></th>
+            <th>500</th>
+            <td>500</td>
+            <td>300</td>
         </tr>
         <tr>
-            <th>Defect</th>
+            <th></th>
             <td>50, 0</td>
-            <td>200, 200</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>50, 0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>50, 0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>50, 0</td>
+            <td></td>
         </tr>
     </table>
 
