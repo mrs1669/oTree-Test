@@ -23,6 +23,11 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
     )
     main = models.StringField(label='実験のメイン')
+    receive_place = models.StringField(
+        choices=[['choice_x', '受取所 X'], ['choice_y', '受取所 Y']],
+        label='行きたい受取所を選択してください',
+        widget=widgets.RadioSelect,
+    )
 
 
 # FUNCTIONS
@@ -33,6 +38,6 @@ class Choose(Page):
 
 class MainResearch(Page):
     form_model = 'player'
-    form_fields = ['main']
+    form_fields = ['receive_place']
 
 page_sequence = [Choose, MainResearch]
