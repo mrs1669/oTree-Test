@@ -30,6 +30,11 @@ class Player(BasePlayer):
         label='行きたい受取所を選択してください',
         widget=widgets.RadioSelect,
     )
+    choose_cost = models.IntegerField(
+        label = 'かける努力コストを入力してください'
+        min=0, 
+        max=500,
+        )
 
 
 # FUNCTIONS
@@ -42,8 +47,12 @@ class Choose(Page):
     form_model = 'player'
     form_fields = ['cooperate']
 
+class ChooseCost(Page):
+    form_model = 'player'
+    form_fields = ['choose_cost']
+
 class MainResearch(Page):
     form_model = 'player'
     form_fields = ['receive_place']
 
-page_sequence = [ResearchStart, Choose, MainResearch]
+page_sequence = [ResearchStart, Choose, ChooseCost, MainResearch]
