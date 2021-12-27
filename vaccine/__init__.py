@@ -5,6 +5,7 @@ class Constants(BaseConstants):
     name_in_url = 'vaccine'
     players_per_group = None
     num_rounds = 1
+    instruction_template = 'vaccine/instruction.html'
 
 
 class Subsession(BaseSubsession):
