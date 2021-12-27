@@ -22,8 +22,12 @@ class Player(BasePlayer):
 
 # FUNCTIONS
 # PAGES
+class Choose(Page):
+    form_model = 'player'
+    form_fields = ['main']
+
 class MainResearch(Page):
     form_model = 'player'
     form_fields = ['main']
 
-page_sequence = [MainResearch]
+page_sequence = [Choose, MainResearch]
