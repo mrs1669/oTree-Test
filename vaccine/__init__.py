@@ -18,6 +18,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    temp = models.StringField(label='temp', blank=True)
     cooperate = models.BooleanField(
         choices=[[True, '先着順方式'], [False, '抽選一括方式']],
         doc="""This player's decision""",
@@ -33,6 +34,10 @@ class Player(BasePlayer):
 
 # FUNCTIONS
 # PAGES
+class ResearchStart(Page):
+    form_model = 'player'
+    form_fields = ['temp']
+
 class Choose(Page):
     form_model = 'player'
     form_fields = ['cooperate']
@@ -41,4 +46,4 @@ class MainResearch(Page):
     form_model = 'player'
     form_fields = ['receive_place']
 
-page_sequence = [Choose, MainResearch]
+page_sequence = [ResearchStart, Choose, MainResearch]
