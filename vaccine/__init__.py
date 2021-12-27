@@ -54,4 +54,8 @@ class MainResearch(Page):
     form_model = 'player'
     form_fields = ['receive_place']
 
-page_sequence = [ResearchStart, Choose, MainResearch, ChooseCost]
+class ChooseResult(Page):
+    form_model = 'player'
+    form_fields = ['temp']
+
+page_sequence = [ResearchStart, Choose, MainResearch, ChooseCost, ChooseResult]
