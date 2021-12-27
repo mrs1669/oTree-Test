@@ -31,10 +31,9 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
     )
     choose_cost = models.IntegerField(
-        label = 'かける努力コストを入力してください'
-        min=0, 
-        max=500,
-        )
+        label = 'かける努力コストを入力してください',
+        min=0, max=500
+    )
 
 
 # FUNCTIONS
@@ -55,4 +54,4 @@ class MainResearch(Page):
     form_model = 'player'
     form_fields = ['receive_place']
 
-page_sequence = [ResearchStart, Choose, ChooseCost, MainResearch]
+page_sequence = [ResearchStart, Choose, MainResearch, ChooseCost]
