@@ -1,10 +1,11 @@
 from otree.api import *
+import random
 
 
 class Constants(BaseConstants):
     name_in_url = 'vaccine'
     players_per_group = None
-    num_rounds = 1
+    num_rounds = random.randint(4,9)
     instruction_template = 'vaccine/instruction.html'
 
 
