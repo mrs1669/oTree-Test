@@ -17,6 +17,11 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    cooperate = models.BooleanField(
+        choices=[[True, '先着順方式'], [False, '抽選一括方式']],
+        doc="""This player's decision""",
+        widget=widgets.RadioSelect,
+    )
     main = models.StringField(label='実験のメイン')
 
 
@@ -24,7 +29,7 @@ class Player(BasePlayer):
 # PAGES
 class Choose(Page):
     form_model = 'player'
-    form_fields = ['main']
+    form_fields = ['cooperate']
 
 class MainResearch(Page):
     form_model = 'player'
